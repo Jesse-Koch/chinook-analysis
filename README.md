@@ -11,15 +11,15 @@ This project follows a single dataset through a realistic pipeline: SQL is used 
 
 ## Repository Structure
 ```
-├── sql/
-│   ├── chinook_queries.sql
+├── SQL/
+│   ├── chinook_sql_queries.sql
 │   └── README.md
-├── excel/
-│   ├── Chinook_Excel_Report.xlsx
+├── Excel/
+│   ├── Chinook_Excel_Analysis.xlsx
 │   └── README.md
-├── powerbi/
-│   ├── Chinook_PowerBI_Dashboard.pbix
-│   ├── Chinook_PowerBI_Dashboard.pdf
+├── PowerBI/
+│   ├── Chinook_PowerBI.pbix
+│   ├── Chinook_PowerBI.pdf
 │   └── README.md
 └── README.md   (this file)
 ```
@@ -32,8 +32,8 @@ The same findings were independently re-derived at each stage, confirming consis
 | Top revenue artist | Iron Maiden, $138.60 (DENSE_RANK) | Confirmed via PivotTable | Confirmed via RANKX |
 | Top revenue genre | Rock, $826.65 (aggregation) | Confirmed via PivotChart | Confirmed via % of Total measure |
 | YoY revenue growth | Calculated via LAG() | Recalculated via "% Difference From (previous)" | Recalculated via SAMEPERIODLASTYEAR |
-| Employee reporting hierarchy | Reconstructed via self-JOIN | — | Reconstructed via RELATED() on a duplicated Employee table |
-| Top employee by portfolio value | Jane Peacock (total) / Steve Johnson (per-customer) | — | Confirmed via employee portfolio table |
+| Employee reporting hierarchy | Reconstructed via self-JOIN | N/A | Reconstructed via RELATED() on a duplicated Employee table |
+| Top employee by portfolio value | Jane Peacock (total) / Steve Johnson (per-customer) | N/A | Confirmed via employee portfolio table |
 
 ## Skills Demonstrated Across the Pipeline
 - **SQL**: multi-table JOINs (up to 5 tables), self-JOIN, many-to-many traversal, window functions (DENSE_RANK, LAG), CTEs, safe division (NULLIF)
@@ -59,9 +59,9 @@ Jane Peacock manages the most customers (21) and generates the highest total rev
 *Recommendation:* if customer-facing capacity ever needs to expand, this analysis identifies exactly where in the organisational hierarchy any support would need to be sourced from.
 
 ## How to Explore This Project
-- Start with `sql analysis README.md` for the full business-question breakdown and the data-quality investigation
-- `Excel Analysis README.md` covers the stakeholder-report phase and the lookup-function comparison
-- `Chinook Power BI.md` covers the data model, DAX measures, and dashboard structure
+- Start with `SQL\README.md` for the full business-question breakdown and the data-quality investigation
+- `Excel\README.md` covers the stakeholder-report phase and the lookup-function comparison
+- `PowerBI\README.md` covers the data model, DAX measures, and dashboard structure
 - Open `Chinook Power BI.pbix` in Power BI Desktop for the full interactive experience, or view the included PDF export for a quick static preview
 
 ## Dataset
