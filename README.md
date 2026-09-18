@@ -1,4 +1,4 @@
-# Chinook Full-Stack Analysis: SQL → Excel → Power BI
+# Chinook Analysis: SQL → Excel → Power BI
 
 ## Overview
 A three-phase analytics pipeline built on the Chinook digital media store database, demonstrating how the same relational data and business questions are extracted, reported, and visualized using three different tools.
