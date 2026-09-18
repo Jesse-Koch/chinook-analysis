@@ -54,7 +54,7 @@ Rock generates more revenue ($826.65) than the next three genres combined, and d
 Jane Peacock manages the most customers (21) and generates the highest total revenue, but Steve Johnson's smaller portfolio (18 customers) generates the highest average revenue per customer ($40.01 vs. Jane's $39.67).
 *Recommendation:* investigate whether Steve Johnson's approach to customer relationships is replicable. 
 
-**3. Organizational capacity.*
+**3. Organizational capacity.**
 5 of 8 employees show no customer-linked activity, entirely concentrated in a single non-sales branch of the reporting hierarchy (under Michael Mitchell). Only the three employees reporting to Nancy Edwards handle customer accounts.
 *Recommendation:* if customer-facing capacity ever needs to expand, this analysis identifies exactly where in the organisational hierarchy any support would need to be sourced from.
 
