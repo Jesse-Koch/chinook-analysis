@@ -1,4 +1,4 @@
-# Chinook Full-Stack Analysis
+# Chinook Analysis
 # Phase 2: Excel
  
 *Part of a three-phase pipeline: SQL → Excel → Power BI. See the top-level README for the full project.*
