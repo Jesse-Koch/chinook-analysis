@@ -14,7 +14,7 @@ Final stage of the pipeline. The Chinook database is connected directly (via MyS
 
 `InvoiceLine` sits at the center as the fact table; every other table is a dimension table describing who, what, or which category a given transaction relates to.
 
-**Self-join workaround:** Power BI's relationship dialog does not allow selecting the same table on both sides of a relationship. Resolved by duplicating the Employee table in Power Query to create `EmployeeManager` — a role-playing dimension representing the same underlying data in a second role. `Employee[ReportsTo]` connects to `EmployeeManager[EmployeeId]`, allowing each employee's manager to be looked up via `RELATED()`.
+**Self-join workaround:** Power BI's relationship dialog does not allow selecting the same table on both sides of a relationship. Resolved by duplicating the Employee table in Power Query to create `EmployeeManager` (a role-playing dimension representing the same underlying data in a second role). `Employee[ReportsTo]` connects to `EmployeeManager[EmployeeId]`, allowing each employee's manager to be looked up via `RELATED()`.
 
 ## Report Structure
 - **Executive Summary**: KPI cards (Total Revenue, Total Customers, Total Invoices, Avg Invoice Value), genre revenue chart, top 10 artists, headline finding
