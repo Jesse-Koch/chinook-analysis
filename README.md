@@ -1,5 +1,82 @@
 # Chinook Analysis: SQL → Excel → Power BI
 
+## ER Diagram
+```mermaid
+erDiagram
+  ARTIST ||--o{ ALBUM : records
+  ALBUM ||--o{ TRACK : contains
+  GENRE ||--o{ TRACK : categorizes
+  MEDIATYPE ||--o{ TRACK : formats
+  TRACK ||--o{ INVOICELINE : "sold as"
+  INVOICE ||--o{ INVOICELINE : contains
+  CUSTOMER ||--o{ INVOICE : places
+  EMPLOYEE ||--o{ CUSTOMER : supports
+  EMPLOYEE ||--o{ EMPLOYEE : "reports to"
+  PLAYLIST ||--o{ PLAYLISTTRACK : includes
+  TRACK ||--o{ PLAYLISTTRACK : "included in"
+
+  ARTIST {
+    int ArtistId PK
+    string Name
+  }
+  ALBUM {
+    int AlbumId PK
+    string Title
+    int ArtistId FK
+  }
+  TRACK {
+    int TrackId PK
+    string Name
+    int AlbumId FK
+    int GenreId FK
+    int MediaTypeId FK
+    decimal UnitPrice
+  }
+  GENRE {
+    int GenreId PK
+    string Name
+  }
+  MEDIATYPE {
+    int MediaTypeId PK
+    string Name
+  }
+  INVOICE {
+    int InvoiceId PK
+    int CustomerId FK
+    datetime InvoiceDate
+    decimal Total
+  }
+  INVOICELINE {
+    int InvoiceLineId PK
+    int InvoiceId FK
+    int TrackId FK
+    decimal UnitPrice
+    int Quantity
+  }
+  CUSTOMER {
+    int CustomerId PK
+    string FirstName
+    string LastName
+    string Country
+    int SupportRepId FK
+  }
+  EMPLOYEE {
+    int EmployeeId PK
+    string FirstName
+    string LastName
+    string Title
+    int ReportsTo FK
+  }
+  PLAYLIST {
+    int PlaylistId PK
+    string Name
+  }
+  PLAYLISTTRACK {
+    int PlaylistId FK
+    int TrackId FK
+  }
+```
+
 ## Overview
 A three-phase analytics pipeline built on the Chinook digital media store database, demonstrating how the same relational data and business questions are extracted, reported, and visualized using three different tools.
 ```
