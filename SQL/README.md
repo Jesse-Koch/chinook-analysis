@@ -34,10 +34,9 @@ Investigation into customer spend and revenue trends uncovered a structural data
 - Invoice totals cluster heavily around exact multiples of $0.99 (Chinook's near-uniform per-track price): $1.98 appears 111 times, $3.96 appears 57 times, etc.
 - At monthly level, revenue is flat at exactly $37.62 in the large majority of months across all five years, with only occasional random deviation.
 
-*As a result, customer-spend and revenue-trend findings are presented as SQL technique demonstrations rather than genuine business insight, a distinction actively verified through investigation rather than assumed. Catalog/popularity findings (genre, artist, playlist) are not subject to this limitation, since they reflect the underlying music library rather than the generated transaction data.*
+*As a result, customer-spend and revenue-trend findings are presented as SQL technique demonstrations rather than genuine business insight, a distinction verified through investigation rather than assumed. Catalog/popularity findings (genre, artist, playlist) are not subject to this limitation, since they reflect the underlying music library rather than the generated transaction data.*
 
 ## Notable Debugging Moments
-- An initial self-join for the employee hierarchy had its join condition reversed (matching direct reports instead of managers), silently building the wrong relationship direction — caught by tracing through what the join condition literally selects for.
 - An attempt to safely handle division by zero used COALESCE instead of NULLIF. NULLIF, which converts the problematic 0 itself into NULL before division, was the correct fix.
 - Several queries included tables in the JOIN chain that were never referenced in the SELECT or GROUP BY, adding unnecessary complexity without affecting results, and were trimmed for clarity.
 
