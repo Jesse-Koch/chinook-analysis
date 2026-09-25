@@ -32,7 +32,7 @@ Relational analysis of the Chinook digital media store database (11 tables: cust
 Investigation into customer spend and revenue trends uncovered a structural data artifact in how Chinook's sales data was generated, using three verification queries:
 - Every customer has exactly 7 invoices (one has 6), which is not natural customer behavior.
 - Invoice totals cluster heavily around exact multiples of $0.99 (Chinook's near-uniform per-track price): $1.98 appears 111 times, $3.96 appears 57 times, etc.
-- At monthly level, revenue is flat at exactly $37.62 in the large majority of months across all five years, with only occasional random deviation.
+- At the monthly level, revenue is flat at exactly $37.62 in the large majority of months across all five years, with only occasional random deviation.
 
 *As a result, customer-spend and revenue-trend findings are presented as SQL technique demonstrations rather than genuine business insight, a distinction verified through investigation rather than assumed. Catalog/popularity findings (genre, artist, playlist) are not subject to this limitation, since they reflect the underlying music library rather than the generated transaction data.*
 
