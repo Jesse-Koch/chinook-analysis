@@ -126,15 +126,15 @@ As a result, this project presents customer-spend and revenue-trend findings as 
 
 **1. Catalog concentration in Rock/Metal.**
 Rock generates more revenue ($826.65) than the next three genres combined, and dominates playlist curation at a comparable scale (3,238 appearances, more than every other genre combined). This consistency across two independent measures, purchasing and curation, is a stronger signal than either on their own.
-*Recommendation:* Prioritize Rock/Metal titles in catalogue acquisition and promotional placement, where demonstrated demand concentration is strongest.
+*Recommendation:* Rock/Metal titles should be prioritised in catalogue acquisition and promotional placement, where demand concentration has been shown to be strongest.
 
 **2. Employee portfolio efficiency.**
 Jane Peacock manages the most customers (21) and generates the highest total revenue, but Steve Johnson's smaller portfolio (18 customers) generates the highest average revenue per customer ($40.01 vs. Jane's $39.67).
-*Recommendation:* Investigate whether Steve Johnson's approach to customer relationships is replicable. 
+*Recommendation:* Investigate whether Steve Johnson's approach to customer relationships can be replicated. 
 
 **3. Organizational capacity.**
 5 of 8 employees show no customer-linked activity, entirely concentrated in a single non-sales branch of the reporting hierarchy (under Michael Mitchell). Only the three employees reporting to Nancy Edwards handle customer accounts.
-*Recommendation:* If customer-facing capacity ever needs to expand, this analysis identifies exactly where in the organisational hierarchy any support would need to be sourced from.
+*Recommendation:* If customer-facing capacity ever needs to expand, this analysis identifies exactly where in the organisational hierarchy any support should be sourced from.
 
 ## How to Explore This Project
 - Start with `SQL\README.md` for the full business-question breakdown and the data-quality investigation
