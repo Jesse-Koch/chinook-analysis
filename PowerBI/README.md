@@ -45,4 +45,4 @@ Findings from the SQL phase were independently re-derived through DAX and Power 
 - The same date-hierarchy auto-grouping issue found in the Excel phase resurfaced in Power BI's default line chart behavior, collapsing all years' same-numbered months together (e.g., merging every January across all five years). Resolved by disabling Auto Date/Time in Power BI's options and binding chart axes to the plain Date field rather than the auto-generated hierarchy.
 
 ## Data Quality Note
-As established in the SQL phase and reconfirmed in Excel, Chinook's transactional data is synthetically generated: every customer has exactly 6–7 invoices, and invoice totals cluster around fixed multiples of a near-uniform $0.99 track price. 
+As established in the SQL and Excel phases, Chinook's transactional data is synthetically generated: every customer has exactly 6–7 invoices, and invoice totals cluster around fixed multiples of a near-uniform $0.99 track price. 
